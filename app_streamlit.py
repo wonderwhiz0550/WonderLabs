@@ -4,7 +4,7 @@ from PIL import Image
 
 st.set_page_config(page_title="Stock Valuation App", layout="centered")
 
-st.title("📊 Stock Valuation Tool (Monte Carlo DCF)")
+st.title("📊 Stock Valuation Tool")
 st.markdown("Evaluate a stock using multi-stage DCF and Monte Carlo simulation.")
 
 # Input fields
