@@ -46,7 +46,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title section
-st.markdown("<h1 style='text-align: center;'>📊 Stock Valuation Tool (Monte Carlo DCF)</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>📊 Stock Valuation Tool </h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Evaluate a stock using multi-stage DCF and Monte Carlo simulation.</p>", unsafe_allow_html=True)
 
 # Input section
