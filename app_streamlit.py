@@ -56,6 +56,18 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+#function starts
+def format_large_number(number):
+    if abs(number) >= 1_000_000_000:
+        return f"${number / 1_000_000_000:.2f}B"
+    elif abs(number) >= 1_000_000:
+        return f"${number / 1_000_000:.2f}M"
+    else:
+        return f"${number:,.0f}"
+#function ends
+
+
+
 # Title
 st.markdown("<h1 style='text-align: center;'>📊 Stock Valuation Tool</h1>", unsafe_allow_html=True)
 
@@ -114,10 +126,13 @@ with right:
                 cols = st.columns(3)
                 with cols[0]:
                     st.metric("📌 Current Price", f"${result['stock_price']:.2f}")
-                    st.metric("📈 Revenue", f"${result['revenue']:,.0f}")
+                    #st.metric("📈 Revenue", f"${result['revenue']:,.0f}")
+                    st.metric("📈 Revenue", format_large_number(result['revenue']))
+                
                 with cols[1]:
                     st.metric("💰 Simulated Price", f"${result['mean_simulated_price']:.2f}")
-                    st.metric("💸 Free Cash Flow", f"${result['free_cash_flow']:,.0f}")
+                    #st.metric("💸 Free Cash Flow", f"${result['free_cash_flow']:,.0f}")
+                    st.metric("💸 Free Cash Flow", format_large_number(result['free_cash_flow']))
                 with cols[2]:
                     st.metric("📊 Valuation", result['valuation_status'])
                     st.metric("🧮 FCF Margin", f"{result['fcf_margin']:.2%}")
