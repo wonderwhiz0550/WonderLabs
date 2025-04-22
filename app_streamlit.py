@@ -121,5 +121,5 @@ with right:
                 with cols[2]:
                     st.metric("📊 Valuation", result['valuation_status'])
                     st.metric("🧮 FCF Margin", f"{result['fcf_margin']:.2%}")
-                st.image(plot_path, caption="📉 Monte Carlo Histogram", use_column_width=True)
+                st.image(plot_path, caption="📉 Monte Carlo Histogram", use_container_width=True)
     st.markdown('</div>', unsafe_allow_html=True)
