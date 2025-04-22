@@ -96,7 +96,7 @@ with left:
         sensitivity_range = st.slider("Sensitivity Range", 0.001, 0.1, 0.04, 0.001)
         num_monte_carlo_sims = st.slider("Monte Carlo Simulations", 100, 20000, 10000, step=100)
         exit_multiple = st.slider("Exit Multiple", 5, 40, 20)
-        terminal_method = st.radio("Terminal Value Method", ["perpetual_growth", "exit_multiple"], index=1)
+        terminal_method = st.radio("Terminal Value Method", ["perpetual_growth", "exit_multiple"], index=0)
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Update config
