@@ -134,7 +134,8 @@ def evaluate_stock(ticker, config):
     if revenue == 0:
         return None, "Revenue is zero", None
 
-    fcf_margin = free_cash_flow / revenue
+    #fcf_margin = free_cash_flow / revenue
+    fcf_margin = min(free_cash_flow / revenue, 0.35)
     discount_rate = calculate_discount_rate(ticker, debt, market_cap)
     terminal_growth_rate = config["terminal_growth_rate"]
 
