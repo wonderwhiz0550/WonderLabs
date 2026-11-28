@@ -93,7 +93,7 @@ config = {
     "adjust_for_sbc": False,              # deduct stock-based compensation from FCF (matters for US tech)
     "min_spread": 0.02,                   # enforce discount_rate - terminal_growth >= 2%
     "random_seed": None,                  # set an int for reproducible simulations
-    "gemini_model": "gemini-2.5-flash",
+    "gemini_model": "gemini-2.5-lite",
 }
 _DEFAULTS = dict(config)  # snapshot so callers' mutations of `config` never corrupt defaults
 
