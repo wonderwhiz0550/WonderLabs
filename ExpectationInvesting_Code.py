@@ -585,7 +585,7 @@ def evaluate_stock(ticker, config_in=None):
         "sbc_adjusted": sbc_adjusted,
         "fraction_nonpositive": frac_nonpos,
         "warnings": warnings,
-        "genai_error": genai_error,
+        #"genai_error": genai_error,
     }
     return output, "Success", plot_path
 
