@@ -560,7 +560,7 @@ def evaluate_stock(ticker, config_in=None):
         "revenue": revenue,
         "free_cash_flow": fcf,
         "fcf_margin": fcf_margin,
-        "genai_analysis": genai_text,
+       # "genai_analysis": genai_text,
         # additional keys
         "ticker": ticker,
         "market": market,
