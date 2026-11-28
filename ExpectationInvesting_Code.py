@@ -549,8 +549,8 @@ def evaluate_stock(ticker, config_in=None):
                f"probability value > price {np.mean(paths > price):.0%}; cost of equity {ke:.1%}; "
                f"base growth {base_growth:.1%}; FCF margin {fcf_margin:.1%}"
                + ("; FCF is after stock-based compensation" if sbc_adjusted else ""))
-  #  genai_text, genai_error = fetch_genai_stock_analysis(
-   #     ticker, d["name"], context, cfg["gemini_model"], market)
+    genai_text, genai_error = fetch_genai_stock_analysis(
+       ticker, d["name"], context, cfg["gemini_model"], market)
 
     output = {
         # keys the original front end reads
@@ -560,7 +560,7 @@ def evaluate_stock(ticker, config_in=None):
         "revenue": revenue,
         "free_cash_flow": fcf,
         "fcf_margin": fcf_margin,
-       # "genai_analysis": genai_text,
+        "genai_analysis": genai_text,
         # additional keys
         "ticker": ticker,
         "market": market,
@@ -585,7 +585,7 @@ def evaluate_stock(ticker, config_in=None):
         "sbc_adjusted": sbc_adjusted,
         "fraction_nonpositive": frac_nonpos,
         "warnings": warnings,
-        #"genai_error": genai_error,
+        "genai_error": genai_error,
     }
     return output, "Success", plot_path
 
